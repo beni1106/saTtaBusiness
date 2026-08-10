@@ -1,0 +1,78 @@
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-[#0B1F17]/95 backdrop-blur border-b border-hairline transition-shadow duration-300" data-scrolled="false">
+  <nav class="mx-auto max-w-6xl px-6 lg:px-8 flex items-center justify-between h-20">
+    <a href="/index.html" class="flex items-center gap-2.5 shrink-0">
+        <path d="M14 2.5L23.5 6.3V13C23.5 18.8 19.4 23 14 25.5C8.6 23 4.5 18.8 4.5 13V6.3L14 2.5Z" stroke="#F4B400" stroke-width="1.75" stroke-linejoin="round"/>
+        <path d="M9.5 14L12.3 16.8L18.5 10" stroke="#F4B400" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="font-bold text-white text-lg leading-none">Sattafa <span class="text-body-secondary font-medium hidden sm:inline">Business Partner</span></span>
+    </a>
+
+    <!-- Nav link mendatar: hanya tampil di desktop (lg ke atas) -->
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="/index.html" data-nav-link="home" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.home">Beranda</a>
+      <a href="/about.html" data-nav-link="about" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.about">Tentang Kami</a>
+      <a href="/services.html" data-nav-link="services" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.services">Layanan</a>
+      <a href="/contact.html" data-nav-link="contact" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.contact">Kontak</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center rounded-full border border-hairline p-1 text-xs font-mono">
+        <button type="button" data-lang-btn="id" class="btn-subtle px-3 py-1.5 rounded-full transition-colors hover:text-brand cursor-pointer" aria-pressed="true">ID</button>
+        <button type="button" data-lang-btn="en" class="btn-subtle px-3 py-1.5 rounded-full transition-colors hover:text-brand cursor-pointer" aria-pressed="false">EN</button>
+      </div>
+      <a href="/contact.html" class="btn-live group hidden lg:inline-flex items-center gap-2 rounded-[12px] bg-brand hover:bg-brand-hover text-[#0F172A] text-sm font-semibold px-5 py-2.5">
+        <span data-i18n="nav.cta">Konsultasi</span>
+        <i data-lucide="arrow-right" class="btn-icon w-4 h-4"></i>
+      </a>
+
+      <!-- Hamburger cuma untuk mobile & tablet (di bawah breakpoint lg) -->
+      <button type="button" id="menu-btn" class="btn-subtle flex lg:hidden items-center gap-2.5 text-white pl-3 pr-2 py-2 -mr-2 rounded-[12px] border border-hairline hover:border-brand transition-colors" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-panel">
+        <span class="hidden sm:inline text-sm font-medium">Menu</span>
+        <i data-lucide="menu" class="w-5 h-5" data-icon-open></i>
+        <i data-lucide="x" class="w-5 h-5 hidden" data-icon-close></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ OFF-CANVAS MENU PANEL ============ -->
+<!-- Sengaja jadi SIBLING dari <header>, bukan anaknya, karena backdrop-blur di <header>
+     bikin position:fixed di dalamnya terkurung ukuran header, bukan full viewport. -->
+<div id="menu-overlay" class="fixed inset-0 z-40 hidden">
+  <div id="menu-backdrop" class="absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300"></div>
+
+  <div id="menu-panel" class="absolute top-0 right-0 h-full w-full sm:w-[440px] bg-[#0B1F17] border-l border-hairline translate-x-full transition-transform duration-300 ease-out flex flex-col">
+    <div class="flex items-center justify-between px-6 sm:px-10 h-20 border-b border-hairline shrink-0">
+      <span class="eyebrow">Navigasi</span>
+    </div>
+
+    <nav class="flex-1 px-6 sm:px-10 py-8 flex flex-col overflow-y-auto">
+      <a href="/index.html" data-nav-link="home" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.home">Beranda</span>
+        <span class="font-mono text-xs text-brand">01</span>
+      </a>
+      <a href="/about.html" data-nav-link="about" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.about">Tentang Kami</span>
+        <span class="font-mono text-xs text-brand">02</span>
+      </a>
+      <a href="/services.html" data-nav-link="services" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.services">Layanan</span>
+        <span class="font-mono text-xs text-brand">03</span>
+      </a>
+      <a href="/contact.html" data-nav-link="contact" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.contact">Kontak</span>
+        <span class="font-mono text-xs text-brand">04</span>
+      </a>
+    </nav>
+
+    <div class="px-6 sm:px-10 py-6 border-t border-hairline shrink-0 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <button type="button" data-lang-btn="id" class="px-3 py-1.5 rounded-full border border-hairline font-mono text-xs hover:border-brand hover:text-brand transition-colors cursor-pointer">ID</button>
+        <button type="button" data-lang-btn="en" class="px-3 py-1.5 rounded-full border border-hairline font-mono text-xs hover:border-brand hover:text-brand transition-colors cursor-pointer">EN</button>
+      </div>
+      <a href="mailto:info@sattafabp.com" class="flex items-center gap-2 text-sm text-body-secondary hover:text-brand transition-colors">
+        <i data-lucide="mail" class="w-4 h-4"></i> info@sattafabp.com
+      </a>
+    </div>
+  </div>
+</div>
