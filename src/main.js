@@ -153,12 +153,16 @@ document.querySelectorAll('[data-accordion-item]').forEach(item => {
 })
 
 // --- Lang switcher fungsional (client-side, ganti teks lewat data-i18n) ---
-const LANG_KEY = 'sbp-lang'
+const LANG_KEY = 'sbp-lang-v2'
 function applyLang(lang) {
   const table = dict[lang] || dict.id
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n
     if (table[key]) el.textContent = table[key]
+  })
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder
+    if (table[key]) el.setAttribute('placeholder', table[key])
   })
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     const active = btn.dataset.langBtn === lang
@@ -175,4 +179,4 @@ document.querySelectorAll('[data-lang-btn]').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.langBtn))
 })
 
-applyLang(localStorage.getItem(LANG_KEY) || 'id')
+applyLang(localStorage.getItem(LANG_KEY) || 'en')
