@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sattafa Business Partner</title>
+  <meta name="description" content="Contact Sattafa Business Partner for management consulting and corporate training." />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="contact" class="bg-bg-main text-body">
+  <!--@include(nav)-->
+
+  <main>
+    <section class="pt-40 pb-16 lg:pt-48 lg:pb-20">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8 text-center" data-reveal>
+        <p class="eyebrow mb-4" data-i18n="contact.hero.eyebrow">Contact</p>
+        <h1 class="text-white font-extrabold text-[36px] lg:text-[48px] leading-tight" data-i18n="contact.hero.title">Let's Discuss Your Needs</h1>
+        <p class="mt-6 text-lg text-body-secondary leading-relaxed" data-i18n="contact.hero.desc">Our team is ready to help design the right consulting or training program for your organization.</p>
+      </div>
+    </section>
+
+    <section class="pb-16">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+
+        <!-- INFO + FORM -->
+        <div data-reveal>
+          <div class="space-y-5 mb-10">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-[12px] bg-card border border-hairline flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-brand"></i></div>
+              <div>
+                <p class="text-white font-medium text-sm" data-i18n="contact.info.email.label">Email</p>
+                <p class="text-body-secondary text-sm">info@sattafabp.com</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-[12px] bg-card border border-hairline flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-5 h-5 text-brand"></i></div>
+              <div>
+                <p class="text-white font-medium text-sm" data-i18n="contact.info.phone.label">Phone</p>
+                <p class="text-body-secondary text-sm">+62 21 0000 0000</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-[12px] bg-card border border-hairline flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-brand"></i></div>
+              <div>
+                <p class="text-white font-medium text-sm" data-i18n="contact.info.address.label">Address</p>
+                <p class="text-body-secondary text-sm">Jakarta, Indonesia</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="space-y-4" data-static-form>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-white mb-1.5" for="name" data-i18n="contact.form.name.label">Name</label>
+                <input id="name" name="name" type="text" required class="w-full rounded-[12px] bg-card border border-hairline px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand outline-none transition-colors" placeholder="Full name" data-i18n-placeholder="contact.form.name.placeholder" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-white mb-1.5" for="email" data-i18n="contact.form.email.label">Email</label>
+                <input id="email" name="email" type="email" required class="w-full rounded-[12px] bg-card border border-hairline px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand outline-none transition-colors" placeholder="name@company.com" data-i18n-placeholder="contact.form.email.placeholder" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-white mb-1.5" for="company" data-i18n="contact.form.company.label">Company</label>
+              <input id="company" name="company" type="text" class="w-full rounded-[12px] bg-card border border-hairline px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand outline-none transition-colors" placeholder="Company name (optional)" data-i18n-placeholder="contact.form.company.placeholder" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-white mb-1.5" for="message" data-i18n="contact.form.message.label">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full rounded-[12px] bg-card border border-hairline px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand outline-none transition-colors" placeholder="Tell us about your organization's needs..." data-i18n-placeholder="contact.form.message.placeholder"></textarea>
+            </div>
+            <button type="submit" class="btn-live group inline-flex items-center gap-2 rounded-[12px] bg-brand hover:bg-brand-hover text-[#0F172A] font-semibold px-6 py-3.5">
+              <span data-i18n="contact.form.submit">Send Message</span>
+              <i data-lucide="arrow-right" class="btn-icon w-4 h-4"></i>
+            </button>
+            <p class="text-xs text-body-secondary pt-1" data-i18n="contact.form.note">* This form is currently a static display — not yet connected to any email or backend.</p>
+          </form>
+        </div>
+
+        <!-- MAP -->
+        <div class="rounded-[12px] overflow-hidden border border-hairline min-h-[420px] lg:min-h-full" data-reveal data-reveal-delay="100">
+          <iframe
+            title="Sattafa Business Partner Location"
+            class="w-full h-full min-h-[420px] grayscale-0"
+            style="filter: invert(90%) hue-rotate(180deg) contrast(0.9);"
+            src="https://www.google.com/maps?q=Jakarta,Indonesia&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICE REACH ============ -->
+    <section class="pb-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8" data-reveal>
+        <div class="rounded-[12px] bg-card border border-hairline p-8 lg:p-10">
+          <p class="eyebrow mb-4" data-i18n="contact.reach.label">Our Service Reach</p>
+          <p class="text-body-secondary leading-relaxed" data-i18n="contact.reach.text">We serve your business needs both nationwide and internationally. Leveraging our strategic location in Batam, we offer seamless access and connections to Singapore and Malaysia. Our team is fully prepared to meet you directly at your location based on a mutually agreed schedule. Additionally, we have Official Representatives &amp; Marketing Hubs strategically based in key cities, including Batam, Jakarta, Bogor, Bandung, and Cirebon.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--@include(footer)-->
+</body>
+</html>

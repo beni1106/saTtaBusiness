@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sattafa Business Partner — Management Services, Consulting, Training</title>
+  <meta name="description" content="Sattafa Business Partner helps your organization build a solid, ISO-certified management system." />
+  <script type="module" crossorigin src="/assets/main-BYcO3oLP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C1x5I3t7.css">
+</head>
+<body data-page="home" class="bg-bg-main text-body">
+  <header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-[#0B1F17]/95 backdrop-blur border-b border-hairline transition-shadow duration-300" data-scrolled="false">
+  <nav class="mx-auto max-w-6xl px-6 lg:px-8 flex items-center justify-between h-20">
+    <a href="/index.html" class="flex items-center gap-2.5 shrink-0">
+        <path d="M14 2.5L23.5 6.3V13C23.5 18.8 19.4 23 14 25.5C8.6 23 4.5 18.8 4.5 13V6.3L14 2.5Z" stroke="#F4B400" stroke-width="1.75" stroke-linejoin="round"/>
+        <path d="M9.5 14L12.3 16.8L18.5 10" stroke="#F4B400" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="font-bold text-white text-lg leading-none">Sattafa <span class="text-body-secondary font-medium hidden sm:inline">Business Partner</span></span>
+    </a>
+
+    <!-- Nav link mendatar: hanya tampil di desktop (lg ke atas) -->
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="/index.html" data-nav-link="home" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.home">Home</a>
+      <a href="/about.html" data-nav-link="about" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.about">About Us</a>
+      <a href="/services.html" data-nav-link="services" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.services">Services</a>
+      <a href="/contact.html" data-nav-link="contact" class="nav-link text-sm font-semibold text-white/85 hover:text-brand transition-colors" data-i18n="nav.contact">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center rounded-full border border-hairline p-1 text-xs font-mono">
+        <button type="button" data-lang-btn="id" class="btn-subtle px-3 py-1.5 rounded-full transition-colors hover:text-brand cursor-pointer" aria-pressed="true">ID</button>
+        <button type="button" data-lang-btn="en" class="btn-subtle px-3 py-1.5 rounded-full transition-colors hover:text-brand cursor-pointer" aria-pressed="false">EN</button>
+      </div>
+      <a href="/contact.html" class="btn-live group hidden lg:inline-flex items-center gap-2 rounded-[12px] bg-brand hover:bg-brand-hover text-[#0F172A] text-sm font-semibold px-5 py-2.5">
+        <span data-i18n="nav.cta">Consult Us</span>
+        <i data-lucide="arrow-right" class="btn-icon w-4 h-4"></i>
+      </a>
+
+      <!-- Hamburger cuma untuk mobile & tablet (di bawah breakpoint lg) -->
+      <button type="button" id="menu-btn" class="btn-subtle flex lg:hidden items-center gap-2.5 text-white pl-3 pr-2 py-2 -mr-2 rounded-[12px] border border-hairline hover:border-brand transition-colors" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-panel">
+        <span class="hidden sm:inline text-sm font-medium">Menu</span>
+        <i data-lucide="menu" class="w-5 h-5" data-icon-open></i>
+        <i data-lucide="x" class="w-5 h-5 hidden" data-icon-close></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ OFF-CANVAS MENU PANEL ============ -->
+<!-- Sengaja jadi SIBLING dari <header>, bukan anaknya, karena backdrop-blur di <header>
+     bikin position:fixed di dalamnya terkurung ukuran header, bukan full viewport. -->
+<div id="menu-overlay" class="fixed inset-0 z-40 hidden">
+  <div id="menu-backdrop" class="absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300"></div>
+
+  <div id="menu-panel" class="absolute top-0 right-0 h-full w-full sm:w-[440px] bg-[#0B1F17] border-l border-hairline translate-x-full transition-transform duration-300 ease-out flex flex-col">
+    <div class="flex items-center justify-between px-6 sm:px-10 h-20 border-b border-hairline shrink-0">
+      <span class="eyebrow">Navigasi</span>
+    </div>
+
+    <nav class="flex-1 px-6 sm:px-10 py-8 flex flex-col overflow-y-auto">
+      <a href="/index.html" data-nav-link="home" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.home">Home</span>
+        <span class="font-mono text-xs text-brand">01</span>
+      </a>
+      <a href="/about.html" data-nav-link="about" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.about">About Us</span>
+        <span class="font-mono text-xs text-brand">02</span>
+      </a>
+      <a href="/services.html" data-nav-link="services" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.services">Services</span>
+        <span class="font-mono text-xs text-brand">03</span>
+      </a>
+      <a href="/contact.html" data-nav-link="contact" class="group flex items-center justify-between py-5 border-b border-hairline">
+        <span class="text-white text-3xl font-bold group-hover:text-brand transition-colors" data-i18n="nav.contact">Contact</span>
+        <span class="font-mono text-xs text-brand">04</span>
+      </a>
+    </nav>
+
+    <div class="px-6 sm:px-10 py-6 border-t border-hairline shrink-0 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <button type="button" data-lang-btn="id" class="px-3 py-1.5 rounded-full border border-hairline font-mono text-xs hover:border-brand hover:text-brand transition-colors cursor-pointer">ID</button>
+        <button type="button" data-lang-btn="en" class="px-3 py-1.5 rounded-full border border-hairline font-mono text-xs hover:border-brand hover:text-brand transition-colors cursor-pointer">EN</button>
+      </div>
+      <a href="mailto:info@sattafabp.com" class="flex items-center gap-2 text-sm text-body-secondary hover:text-brand transition-colors">
+        <i data-lucide="mail" class="w-4 h-4"></i> info@sattafabp.com
+      </a>
+    </div>
+  </div>
+</div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-40 pb-20 lg:pt-52 lg:pb-24 overflow-hidden">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <img src="/img/1.jpeg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0" style="background: linear-gradient(to top,
+          rgba(0,0,0,0.95) 0%,
+          rgba(0,0,0,0.75) 15%,
+          rgba(0,0,0,0.45) 35%,
+          rgba(0,0,0,0.18) 55%,
+          rgba(0,0,0,0.05) 75%,
+          rgba(0,0,0,0) 100%);"></div>
+        <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(rgba(255,255,255,.6) 1px, transparent 1px); background-size: 28px 28px;"></div>
+      </div>
+
+      <div class="absolute -right-10 bottom-0 w-72 h-72 opacity-[0.1] pointer-events-none hidden lg:block" aria-hidden="true">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" role="img" aria-label="Simbol akreditasi Sattafa Business Partner">
+  <g stroke="#F4B400" stroke-width="2" opacity="0.9">
+    <circle cx="160" cy="160" r="138" stroke-dasharray="2 10" stroke-linecap="round" />
+  </g>
+  <circle cx="160" cy="160" r="112" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+  <polyline points="72,196 108,168 140,182 176,124 214,98" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  <circle cx="72" cy="196" r="4.5" fill="#FFFFFF" />
+  <circle cx="108" cy="168" r="4.5" fill="#FFFFFF" />
+  <circle cx="140" cy="182" r="4.5" fill="#FFFFFF" />
+  <circle cx="176" cy="124" r="4.5" fill="#FFFFFF" />
+  <circle cx="214" cy="98" r="6" fill="#F4B400" />
+  <path d="M214,98 L232,92 L226,110 Z" fill="#F4B400" />
+  <circle cx="228" cy="222" r="40" fill="#F4B400" />
+  <path d="M211,222 L223,234 L246,209" stroke="#0B1F17" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
+      </div>
+
+      <div class="relative mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow mb-5" data-i18n="hero.eyebrow">Management Services, Consulting, Training</p>
+          <h1 class="text-white font-extrabold leading-[1.08] text-[40px] sm:text-[48px] lg:text-[56px]">
+            <span data-i18n="hero.title.line1">Trusted Partners,</span><br />
+            <span class="text-brand" data-i18n="hero.title.line2">Smarter Business Growth</span>
+          </h1>
+          <p class="mt-6 text-lg text-body-secondary max-w-xl leading-relaxed" data-i18n="hero.desc">Sattafa Business Partner helps your organization build management systems that are solid, certified, and competitive — from ISO consulting to team capability development.</p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="/services.html" class="btn-live group inline-flex items-center gap-2 rounded-[12px] bg-brand hover:bg-brand-hover text-[#0F172A] font-semibold px-6 py-3.5">
+              <span data-i18n="hero.cta1">Our Services</span>
+              <i data-lucide="arrow-right" class="btn-icon w-4 h-4"></i>
+            </a>
+            <a href="/contact.html" class="btn-subtle inline-flex items-center gap-2 rounded-[12px] border border-white text-white hover:bg-white/10 font-semibold px-6 py-3.5 transition-colors" data-i18n="hero.cta2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-6xl px-6 lg:px-8 mt-16 pt-8 border-t border-hairline" data-reveal data-reveal-delay="250">
+        <p class="eyebrow mb-4 opacity-80" data-i18n="hero.ticker">Standards &amp; Competencies We Support</p>
+        <div class="flex flex-wrap gap-x-8 gap-y-3 font-mono text-sm text-white/70">
+          <span>ISO 9001</span><span class="text-white/30">·</span>
+          <span>ISO 45001</span><span class="text-white/30">·</span>
+          <span>ISO 14001</span><span class="text-white/30">·</span>
+          <span>ISO 37001</span><span class="text-white/30">·</span>
+          <span>PMP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="bg-section py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow mb-4" data-i18n="why.eyebrow">Why Sattafa</p>
+          <h2 class="text-white font-bold text-[32px] lg:text-[40px] leading-tight" data-i18n="why.title">Not Just a Consultant, But a Working Partner</h2>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <div class="rounded-[12px] bg-card border border-hairline p-7" data-spotlight data-reveal data-reveal-delay="0">
+            <i data-lucide="shield-check" class="w-8 h-8 text-brand mb-5"></i>
+            <h3 class="text-white font-semibold text-lg mb-2" data-i18n="why.1.title">Experienced Audit Team</h3>
+            <p class="text-sm text-body-secondary leading-relaxed" data-i18n="why.1.desc">Led by practitioners with audit and certification backgrounds from leading global certification bodies.</p>
+          </div>
+          <div class="rounded-[12px] bg-card border border-hairline p-7" data-spotlight data-reveal data-reveal-delay="100">
+            <i data-lucide="layers" class="w-8 h-8 text-brand mb-5"></i>
+            <h3 class="text-white font-semibold text-lg mb-2" data-i18n="why.2.title">Cross-Industry Expertise</h3>
+            <p class="text-sm text-body-secondary leading-relaxed" data-i18n="why.2.desc">A track record across aerospace, manufacturing, marine services, and onshore &amp; offshore construction.</p>
+          </div>
+          <div class="rounded-[12px] bg-card border border-hairline p-7" data-spotlight data-reveal data-reveal-delay="200">
+            <i data-lucide="users" class="w-8 h-8 text-brand mb-5"></i>
+            <h3 class="text-white font-semibold text-lg mb-2" data-i18n="why.3.title">Where Theory Meets Practice</h3>
+            <p class="text-sm text-body-secondary leading-relaxed" data-i18n="why.3.desc">Every training program is designed to be applied directly to your team's daily operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES PREVIEW ============ -->
+    <section class="py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow mb-4" data-i18n="services.eyebrow">What We Do</p>
+          <h2 class="text-white font-bold text-[32px] lg:text-[40px] leading-tight" data-i18n="services.title">Three Pillars of Our Services</h2>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-px bg-white/10 rounded-[12px] overflow-hidden border border-hairline">
+          <a href="/services.html" class="group bg-bg-main p-8 hover:bg-card-hover transition-colors" data-spotlight data-reveal data-reveal-delay="0">
+            <span class="font-mono text-brand text-sm">01</span>
+            <h3 class="text-white font-semibold text-xl mt-4 mb-2" data-i18n="services.1.title">Management Services</h3>
+            <p class="text-sm text-body-secondary leading-relaxed mb-6" data-i18n="services.1.desc">Project management, accounting, through to internal control system implementation.</p>
+            <span class="inline-flex items-center gap-1.5 text-sm font-medium text-brand group-hover:gap-2.5 transition-all"><span data-i18n="services.link">View service details</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+          </a>
+          <a href="/services.html" class="group bg-bg-main p-8 hover:bg-card-hover transition-colors" data-spotlight data-reveal data-reveal-delay="100">
+            <span class="font-mono text-brand text-sm">02</span>
+            <h3 class="text-white font-semibold text-xl mt-4 mb-2" data-i18n="services.2.title">Management Consulting</h3>
+            <p class="text-sm text-body-secondary leading-relaxed mb-6" data-i18n="services.2.desc">ISO certification support, ESG, business process re-engineering, and balanced scorecard.</p>
+            <span class="inline-flex items-center gap-1.5 text-sm font-medium text-brand group-hover:gap-2.5 transition-all"><span data-i18n="services.link">View service details</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+          </a>
+          <a href="/services.html" class="group bg-bg-main p-8 hover:bg-card-hover transition-colors" data-spotlight data-reveal data-reveal-delay="200">
+            <span class="font-mono text-brand text-sm">03</span>
+            <h3 class="text-white font-semibold text-xl mt-4 mb-2" data-i18n="services.3.title">Management Training</h3>
+            <p class="text-sm text-body-secondary leading-relaxed mb-6" data-i18n="services.3.desc">Structured training programs to build your internal team's capacity and competence.</p>
+            <span class="inline-flex items-center gap-1.5 text-sm font-medium text-brand group-hover:gap-2.5 transition-all"><span data-i18n="services.link">View service details</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="relative bg-[#0B1F17] py-20 overflow-hidden">
+      <div class="absolute -left-10 -top-16 w-64 h-64 opacity-[0.07] pointer-events-none">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" role="img" aria-label="Simbol akreditasi Sattafa Business Partner">
+  <g stroke="#F4B400" stroke-width="2" opacity="0.9">
+    <circle cx="160" cy="160" r="138" stroke-dasharray="2 10" stroke-linecap="round" />
+  </g>
+  <circle cx="160" cy="160" r="112" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+  <polyline points="72,196 108,168 140,182 176,124 214,98" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  <circle cx="72" cy="196" r="4.5" fill="#FFFFFF" />
+  <circle cx="108" cy="168" r="4.5" fill="#FFFFFF" />
+  <circle cx="140" cy="182" r="4.5" fill="#FFFFFF" />
+  <circle cx="176" cy="124" r="4.5" fill="#FFFFFF" />
+  <circle cx="214" cy="98" r="6" fill="#F4B400" />
+  <path d="M214,98 L232,92 L226,110 Z" fill="#F4B400" />
+  <circle cx="228" cy="222" r="40" fill="#F4B400" />
+  <path d="M211,222 L223,234 L246,209" stroke="#0B1F17" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
+      </div>
+      <div class="relative mx-auto max-w-3xl px-6 text-center" data-reveal>
+        <h2 class="text-white font-bold text-[28px] lg:text-[36px] leading-tight" data-i18n="cta.title">Ready to Build a Stronger Management System?</h2>
+        <p class="mt-4 text-body-secondary text-lg" data-i18n="cta.desc">Discuss your organization's needs with our team — no upfront commitment.</p>
+        <a href="/contact.html" class="btn-live group mt-8 inline-flex items-center gap-2 rounded-[12px] bg-brand hover:bg-brand-hover text-[#0F172A] font-semibold px-7 py-3.5">
+          <span data-i18n="cta.button">Schedule a Consultation</span>
+          <i data-lucide="arrow-right" class="btn-icon w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative bg-[#0B1F17] border-t border-hairline overflow-hidden">
+  <div class="absolute -right-16 -bottom-20 w-72 h-72 opacity-[0.06] pointer-events-none">
+    <!--@include(seal)-->
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-6 lg:px-8 pt-16 pb-10">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2 pr-8">
+        <span class="font-bold text-white text-lg">Sattafa Business Partner</span>
+        <p class="mt-3 text-sm text-body-secondary leading-relaxed max-w-sm" data-i18n="footer.desc">A management consulting and corporate training partner, helping organizations grow more measurably through ISO standards, audits, and team development.</p>
+      </div>
+      <div>
+        <p class="eyebrow mb-4" data-i18n="footer.quicklinks">Quick Links</p>
+        <ul class="space-y-2.5 text-sm text-body-secondary">
+          <li><a href="/index.html" class="hover:text-brand transition-colors" data-i18n="nav.home">Home</a></li>
+          <li><a href="/about.html" class="hover:text-brand transition-colors" data-i18n="nav.about">About Us</a></li>
+          <li><a href="/services.html" class="hover:text-brand transition-colors" data-i18n="nav.services">Services</a></li>
+          <li><a href="/contact.html" class="hover:text-brand transition-colors" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow mb-4" data-i18n="footer.contact">Contact</p>
+        <ul class="space-y-2.5 text-sm text-body-secondary">
+          <li class="flex gap-2"><i data-lucide="mail" class="w-4 h-4 shrink-0 mt-0.5 text-brand"></i><span>info@sattafabp.com</span></li>
+          <li class="flex gap-2"><i data-lucide="phone" class="w-4 h-4 shrink-0 mt-0.5 text-brand"></i><span>+62 21 0000 0000</span></li>
+          <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 shrink-0 mt-0.5 text-brand"></i><span data-i18n="footer.address">Jakarta, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-body-secondary font-mono" data-i18n="footer.copyright">© 2026 Sattafa Business Partner. All rights reserved.</p>
+      <div class="flex items-center gap-3">
+        <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full border border-hairline flex items-center justify-center hover:border-brand hover:text-brand transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-hairline flex items-center justify-center hover:border-brand hover:text-brand transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="#" aria-label="Email" class="w-9 h-9 rounded-full border border-hairline flex items-center justify-center hover:border-brand hover:text-brand transition-colors"><i data-lucide="mail" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
